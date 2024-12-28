@@ -1,0 +1,241 @@
+body{
+    margin:5% 15%;
+   background-color:hsl(0, 0%, 83%); 
+  
+  }
+  .navbar ul {
+    list-style: none;
+    background-color: hsl(300, 90%, 72%);
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: absolute;     
+  
+}
+
+.navbar a {
+   color: rgb(255, 145, 0);
+   font-weight: bold;
+   text-decoration: none;
+   padding: 15px;
+   display: block;
+   text-align: center;
+   
+}
+
+.navbar li {
+   float: left;
+}
+
+
+  #main-container{
+    background-color:hsl(300, 76%, 72%);
+    height:75vh;
+    width:100%;
+     opacity:0.9; 
+    padding:5px;
+    box-sizing:border-box;
+    border-radius:8px;
+    display:flex;
+    box-shadow: 4px 4px 2px #6465a5;
+    
+  }
+  .player-section h1{
+    margin-top:40px;
+    text-align:center;
+  }
+  ::-webkit-scrollbar{
+    width:5px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color:#132226;
+  }
+  #music-player{
+    width:65%;
+    height:100%;
+    border-right:2px solid #132226;
+  }
+  #music-playlist{
+    width:35%;
+    height:100%;
+    padding-left:5px;
+    box-sizing:border-box;
+    overflow-y:auto;
+  }
+  .player-section{
+    padding-top:30px;
+  }
+  .player-cover-image{
+    width:250px;
+    height:250px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    border-radius:8px;
+  
+  }
+  #progress-wrapper{
+    margin-top:30px;
+    height:5px;
+    background-color:#132226;
+    display:flex;
+    align-items:center;
+    border-radius:3px;
+    margin-left:10px;
+    margin-right:10px;
+  
+  }
+  #progress{
+    /* width:10%; */
+    /* background-color: #6465a5; */
+    background-color:#595775;
+    /* background-color:#132226; */
+    height:5px;
+  }
+  #button-wrapper{
+    display:flex;
+    justify-content: space-evenly;
+  }
+  #button-wrapper i{
+    font-size:35px;
+    margin-top:30px;
+    /* padding-left:20px; */
+  }
+  .pause-button{
+    display:none;
+  }
+  .playlist{
+    width:100%;
+    height:150px;
+    border-bottom:2px solid #132226; 
+    display:flex;
+    align-items:center;
+    justify-content: flex-start;
+  }
+  .playlist-album-cover{
+    width:120px;
+    height:120px;
+    margin-right: 20px;
+    margin-left:15px;
+    border-radius:8px;
+  }
+
+/* Media Query for Tablets and Mobile */
+@media (max-width: 768px) {
+    body {
+        margin: 5% 10%;
+    }
+
+    #main-container {
+        height: auto;
+        padding: 15px;
+    }
+
+    #music-player {
+        height: auto;
+        border-right: none;
+    }
+
+    #music-playlist {
+        padding-left: 5px;
+        height: auto;
+        max-height: 50%; /* Allows for scrollable playlist without taking too much space */
+        background-color: rgba(0, 0, 0, 0.6); /* Improves contrast for text visibility */
+        color: white;
+    }
+
+    .player-cover-image {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #progress-wrapper {
+        margin-top: 15px;
+    }
+
+    #button-wrapper {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #button-wrapper i {
+        font-size: 2.5rem;
+        margin-top: 15px;
+    }
+
+    .playlist {
+        flex-direction: column;
+        margin-top: 10px;
+        height: auto;
+    }
+
+    .playlist-album-cover {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+
+    .playlist li {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: white;
+        padding: 8px 12px;
+    }
+
+    .playlist li:hover {
+        background-color: rgba(0, 0, 0, 0.8); /* Add hover effect for better interaction feedback */
+        cursor: pointer;
+    }
+}
+
+/* Media Query for Small Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        margin: 5% 5%;
+    }
+
+    #main-container {
+        padding: 5px;
+    }
+
+    .player-cover-image {
+        width: 70%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    #progress-wrapper {
+        margin-top: 10px;
+    }
+
+    #button-wrapper i {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .playlist-album-cover {
+        width: 80px;
+        height: 80px;
+    }
+
+    .playlist {
+        height: auto;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    #music-playlist {
+        height: auto;
+        max-height: 45%; /* Keeps the playlist scrollable without taking too much space */
+    }
+
+    .playlist li {
+        font-size: 0.9rem; /* Slightly smaller text for small screens */
+        padding: 5px 10px;
+    }
+}
